@@ -5,7 +5,9 @@
  */
 (function(window, angular, undefined) {'use strict';
 
-if (!angular.lowercase) angular.lowercase = str => angular.isString(str) ? str.toLowerCase() : str;
+if (!angular.lowercase) angular.lowercase = function(str) {
+  return angular.isString(str) ? str.toLowerCase() : str;
+}
 
 var $sanitizeMinErr = angular.$$minErr('$sanitize');
 
